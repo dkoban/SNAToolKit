@@ -1,0 +1,10 @@
+Package: SNAToolKit
+Title: What the Package Does (one line, title case)
+Version: 0.0.0.9000
+Author: Me
+Description: stuff
+Depends: R (>= 3.4.1)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
