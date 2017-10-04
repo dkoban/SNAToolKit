@@ -23,6 +23,7 @@
 
 affiliation_graph <- function(edgelist){
 require(igraph)
+require(visNetwork)
 
 #Assign unique IDs for each node
 sourceIdx=as.numeric(as.factor(edgelist[,1]))
