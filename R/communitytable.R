@@ -29,7 +29,7 @@ communitytable <- function(edgelist){
   g<-graph_from_edgelist(as.matrix(edgelist[,1:2]),directed=FALSE)
   g<-as.undirected(g,mode="collapse")
 
-  #Identify communities using edge betweeness
+  #Identify communities using edge betweenness
   grps<-cluster_edge_betweenness(g)
   df <- data.frame(agent = grps$names, group = grps$membership)
   sortidx <- sort(df$group, decreasing=FALSE, index.return = TRUE)
