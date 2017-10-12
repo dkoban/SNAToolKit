@@ -60,6 +60,9 @@ ifelse(weighted==TRUE, edges<-data.frame(from=igraphEL[,1], to=igraphEL[,2],
        edges<-data.frame(from=igraphEL[,1], to=igraphEL[,2])
 )
 visNetwork(nodes,edges)%>%
-  visOptions(highlightNearest=list(enabled=TRUE, hover=FALSE),nodesIdSelection=TRUE)
+  visOptions(highlightNearest=list(enabled=TRUE, hover=FALSE),nodesIdSelection=TRUE)%>%
+  visPhysics(stabilization = "enabled", barnesHut = list(avoidOverlap = 1)) %>%
+  visIgraphLayout(layout = "layout_with_fr")
+
 }
 

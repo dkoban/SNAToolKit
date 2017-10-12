@@ -48,7 +48,10 @@ visNetwork(nodes,edges)%>%
   visEdges(arrows=list(to=list(enabled=TRUE,scaleFactor=2)))%>%
   visOptions(highlightNearest=list(enabled=TRUE,hover=FALSE),nodesIdSelection=TRUE)%>%
   visGroups(groupname="Activities",color="green",shape="square")%>%
-  visLegend(position="right")
+  visLegend(position="right") %>%
+  visPhysics(stabilization = "enabled", barnesHut = list(avoidOverlap = 1)) %>%
+  visIgraphLayout(layout = "layout_with_fr")
+
 
 }
 
