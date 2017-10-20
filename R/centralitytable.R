@@ -50,7 +50,7 @@ all<-data.frame(rownames(degdf),degdf[,1],
                   rownames(btwndf),round(btwndf[,1],3),
                   rownames(clsdf),round(clsdf[,1],3)
                   )
-colnames(all)<-c(" ","deg"," ","eig"," ","btwn"," ","cls")
+colnames(all)<-c("name","deg","name","eig","name","btwn","name","cls", check.names = FALSE)
 all
 }
 
