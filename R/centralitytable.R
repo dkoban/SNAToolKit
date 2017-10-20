@@ -45,12 +45,12 @@ btwndf<-data.frame(betweenness=sort(btwn,decreasing=TRUE))
 cls<-closeness(g)
 clsdf<-data.frame(closeness=sort(cls,decreasing=TRUE))
 
-all<-data.frame(rownames(degdf),degdf[,1],
-                  rownames(eigdf),round(eigdf[,1],3),
-                  rownames(btwndf),round(btwndf[,1],3),
-                  rownames(clsdf),round(clsdf[,1],3)
+all<-data.frame(name = rownames(degdf), deg = degdf[,1],
+                  name = rownames(eigdf), eig = round(eigdf[,1],3),
+                  name = rownames(btwndf), btwn = round(btwndf[,1],3),
+                  name = rownames(clsdf), cls = round(clsdf[,1],3),
+                  check.names = FALSE
                   )
-colnames(all)<-c("name","deg","name","eig","name","btwn","name","cls", check.names = FALSE)
 all
 }
 
